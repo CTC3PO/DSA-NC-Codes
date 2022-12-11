@@ -13,7 +13,7 @@ def inorder(root):
     inorder(root.right)
 
 # PRE-ORDER traversal
-def inorder(root):
+def preorder(root):
     if not root: 
         return
     print(root.val)     # print before traverse any sub-tree
@@ -21,7 +21,7 @@ def inorder(root):
     inorder(root.right)
 
 # POST-ORDER traversal
-def inorder(root):
+def postorder(root):
     if not root: 
         return
     inorder(root.left)    
