@@ -4,6 +4,14 @@
 # recursively look for target and traverse the tree until finding
 # the target 
 
+#initialize a TreeNode: 
+class TreeNode: 
+    def __init__(self, val):
+        self.val - val
+        self.left = None
+        self.right = None
+
+# Function search in BST: 
 def search(root, target):
     if not root: 
         return False

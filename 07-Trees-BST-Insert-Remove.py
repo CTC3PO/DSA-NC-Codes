@@ -1,4 +1,11 @@
-#INSERTION: 
+#INITIALIZE TREE NODE: 
+class TreeNode: 
+    def __init__(self,val):
+        self.val = val
+        self.left = None
+        self.right = None
+
+#INSERT a new node and return the root of the BST
 def insert (root,val):
     if not root:
         return TreeNode(val)
@@ -8,7 +15,7 @@ def insert (root,val):
         root.left = insert(root.left, val)
     return root 
 
-# DELETION
+# REMOVE a node and return the root of the BST
 def remove(root, val):
     if not root: 
         return None     
@@ -29,7 +36,7 @@ def remove(root, val):
             root.right = remove(root.right, minNode.val) 
     return root 
 
-# Helper function for Remove function:
+# Helper function - Return the min value node of the BST
 def minValueNode(root):
     curr = root 
     while curr and curr.left:

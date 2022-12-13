@@ -2,8 +2,14 @@
 # before go deep into the other sub-tree
 # (recursively run DFS in each sub-tree)
 
-# 3 way to Traverse: INORDER, PREORDER, POSTORDER 
+#INITIALIZE a TreeNode: 
+class TreeNode: 
+    def __init__(self, val):
+        self.val = val
+        self.left = None
+        self.right = None
 
+# 3 way to Traverse: INORDER, PREORDER, POSTORDER 
 # INORDER traversal
 def inorder(root):
     if not root: 

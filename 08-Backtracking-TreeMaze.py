@@ -1,3 +1,5 @@
+# TIME COMPLEXITY: O(n) (traverse through n elements of the tree)
+
 # Question: determine if a path exists from the root of a tree 
 # to a leaf node, it may not contains any zero 
 
@@ -50,5 +52,7 @@ def leafPath(root, path):
     path.pop()
 
     return False 
+
+
 
 
