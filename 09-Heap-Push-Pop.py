@@ -27,11 +27,11 @@ class Heap:
         if len(self.heap) == 1: 
             return None
         # if heap's len is 2, meaning it only contains 1 node,
-        #  return that only node
+        #  return by popping out that only node
         if len (self.heap) == 2: 
             return self.heap.pop() 
         
-        #otherwise, start with root node and move the last node's value to root: 
+        #otherwise, start with root node and set root's node as last node: 
         result = self.heap[1]
         self.heap[1] = self.heap.pop()
         i = 1

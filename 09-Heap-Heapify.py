@@ -20,6 +20,9 @@ class Heap:
             i = current
 
             while 2 * i < len (self.heap): 
+                # if it satisfies all these 3 conditions, then swap right child
+                # 3 conditions: there's a right child node + right child node < left child node
+                # and value at current node > right child node
                 if (2 * i + 1 < len(self.heap) and 
                 self.heap [2 * i + 1] < self.heap[2 * i] and
                 self.heap [2 * i + 1] < self.heap[i]):
