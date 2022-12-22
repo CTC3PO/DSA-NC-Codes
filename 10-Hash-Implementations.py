@@ -11,7 +11,7 @@ class HashMap:
         self.capacity = 2
         self. map = [None, None]
     
-    # Hashing function (ord is func to convert ascii character to a value):
+    # Hash function (ord is func to convert ascii character to a value):
     def hash (self, key):
         index = 0
         # adding all the characters' converted value
