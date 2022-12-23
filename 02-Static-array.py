@@ -11,7 +11,7 @@ def insertEnd(array, n, length, capacity):
 # REMOVE the last position of the array (if the 
 # array is not empty)
 def removeEnd(array, length):
-    if length >0:
+    if length > 0:
         # overwrite last element with default value
         # also decrease the length by 1
         array[length - 1] = 0

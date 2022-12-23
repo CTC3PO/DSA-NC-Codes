@@ -28,9 +28,9 @@ class Queue:
         if not self.left: 
             return None
         
-        # remove left node and return value: 
+        # remove left node and return its value: 
         val = self.left.val 
-        # remove by simple point the currnet left node to the one after it
+        # remove current left node by simply point to the one after it
         self.left = self.left.next 
         return val 
 

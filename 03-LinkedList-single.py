@@ -14,13 +14,17 @@ class LinkedList:
     
     # INSERT END 
     def insertEnd(self, val):
+        # point the current tail to the new listnode 
+        # then set the new node's tail as tail 
         self.tail.next = ListNode(val)
         self.tail = self.tail.next
 
     # REMOVE AT INDEX
     def remove(self,index): 
+        # start w. i at 0 and current points to head node 
         i = 0
         current = self.head
+        # keep moving up current pointer until before the target index: 
         while i < index and current: 
             i += 1
             current = current.next
