@@ -20,7 +20,7 @@ def canReachLeaf(root):
     if not root.left and not root.right:    #
         return True
 
-    #otherwise, if not yet reached leaf node, check left and 
+    # otherwise, if not yet reached leaf node, check left and 
     # right sub-tree (recursively) and see if it contains a path
     if canReachLeaf(root.left):    
         return True
