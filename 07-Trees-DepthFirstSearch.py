@@ -23,13 +23,13 @@ def preorder(root):
     if not root: 
         return
     print(root.val)     # print before traverse any sub-tree
-    inorder(root.left)    
-    inorder(root.right)
+    preorder(root.left)    
+    preorder(root.right)
 
 # POST-ORDER traversal
 def postorder(root):
     if not root: 
         return
-    inorder(root.left)    
-    inorder(root.right) 
+    postorder(root.left)    
+    postorder(root.right) 
     print(root.val)     # print after traverse all the sub-trees
