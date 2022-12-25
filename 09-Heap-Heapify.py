@@ -8,8 +8,14 @@ import heapq
 # then percolate down by comparing that value with its children (
 # left and right child, until order property is maintained)
 
-# example - heapify for a MIN HEAP
+# TIME COMPLEXITY: O(n) for heapify, 
+# to pop tree: O(logn) for each value, and there's n value
+# so it takes O(n logn) to pop the whole tree ==> we
+# can sort value in O(n logn) time 
+''' SEARCH (max/min)      SEARCH(mid)     INSERT/POP
+        O(1)                O(logn)         O(logn)'''
 
+# example - heapify for a MIN HEAP
 class Heap: 
 
     # function: Heapify:
