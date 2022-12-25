@@ -1,42 +1,59 @@
 import heapq
 
-# for MIN HEAP
+# HEAPIFY: build heap, when given a list of values, we can take those 
+# values and turn them into a heap in O(n) time. 
+# start with last node, then compare with its parent node
+# we can skip half the array, taking i // 2, we'll start with
+# the node at i // 2 location, then move up 1 value at a time, 
+# then percolate down by comparing that value with its children (
+# left and right child, until order property is maintained)
+
+# example - heapify for a MIN HEAP
 
 class Heap: 
 
     # function: Heapify:
-    def heapify(self, arr):
-        # move 0-th position to the end:
+    def heapify(self, arr): 
+        # 0-th position is moved to the end
         arr.append(arr[0])
 
-        # assign the array as heap
+        # initialize heap as the array
         self.heap = arr
 
-        #get the current index (which is the first node with children)
-        # we skip over the last half of the nodes (since they don't have children)
+        # we'll start with the current position at half the position of the last element
         current = (len(self.heap) - 1) // 2
+
+        # going into the while loop until current hits 0, we move from the current node and
+        # move up 1 position at a time, each time compares that value wiht its left and right node        
         while current > 0: 
-            #Percolate down: 
+            # start with i as current index 
             i = current
 
-            while 2 * i < len (self.heap): 
-                # if it satisfies all these 3 conditions, then swap right child
-                # 3 conditions: there's a right child node + right child node < left child node
-                # and value at current node > right child node
-                if (2 * i + 1 < len(self.heap) and 
-                self.heap [2 * i + 1] < self.heap[2 * i] and
-                self.heap [2 * i + 1] < self.heap[i]):
-                    # Swap right child: 
+            # at the current index, if there's at least left child, and right child < left child
+            # and right child < node at current, swap current and right child
+            while 2 * i < len(self.heap):
+                if (2 * i < len(self.heap) and self.heap[2 * i + 1] < self.heap[2 * i] and self.heap[ 2 * i + 1] < self.heap[i]): 
+                    # swap node at i (curent node) and its right child
                     temp = self.heap[i]
-                    self.heap[i] = self.heap[2 * i +1]
-                    self.heap[2 * i +1] = temp
+                    self.heap[i] = self.heap[2 * i + 1]
+                    self.heap[2 * i + 1] = temp
+                    # then, move the index i (current) to the next right child node
                     i = 2 * i + 1
-                elif self.heap[i] > self.heap[2*i]:
-                    # Swap left child:
-                    temp = self.heap[i]
-                    self.heap[i] = self.heap [2 * i] 
-                    self.heap[2 * i] = temp
-                    i = 2 * i
+                
+                # elif there's only a left node, and left node < node at i, swap that node with node at i (current node) 
+                elif self.heap[ 2 * i] < self.heap[i]: 
+                    # swap the 2 nodes: 
+                    temp = self.heap[i] 
+                    self.heap[i] = self.heap[ 2 * i]
+                    self.heap[ 2 * i] = temp
+                    # move the index i to the next left child 
+                    i = 2 * i 
+
+                # else, if current node < left and < right child node, break out of the loop
                 else: 
-                    break
-            current -=1
+                    break 
+            
+            # get to the next current index to keep going into the while loop above, to 
+            # keep percolate down until the tree attain its order property 
+            current -= 1
+
