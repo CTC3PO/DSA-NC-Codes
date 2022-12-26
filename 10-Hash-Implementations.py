@@ -115,6 +115,8 @@ class HashMap:
         # then copy elements to the newMap array
         oldMap = self.map
         self.map = newMap
+
+        #reset the size to 0 because the put function increase the size of the array 
         self.size = 0
         for pair in oldMap: 
             if pair: 
