@@ -62,7 +62,8 @@ def bfs(grid):
                 ):
                 continue 
 
-            # Otherwise, add the current vertice's neighbors to the queue and visit set
+            # Otherwise, when we reach a valid position, add the current
+            # vertice's neighbors to the queue and visit set
             # add these to hashset will ensure that the other vertice in the 
             # same level won't traverse those neighbor nodes again 
             queue.append((r + dr, c + dc))
