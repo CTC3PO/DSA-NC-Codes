@@ -35,8 +35,8 @@ right, equivalent to divided by 2 for example:
 # COUNTING BITS 
 # EXAMPLE: Count no of bits in 23 
 # 23 is represented as 10111
-# How to count bit of 23, we bitwise it 1 1 until it becomes 0
-# it it bitwise with 1 evaluates to 1, increase count by 1
+# How to count bit of 23, we bitwise it 1 until it becomes 0
+# if it bitwise with 1 evaluates to 1, increase count by 1
 
 # (1)    10111  (no 23) 
 #      & 00001  (no 1)
