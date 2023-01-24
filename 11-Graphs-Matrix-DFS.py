@@ -16,7 +16,7 @@ def dfs (grid, r, c, visit):    # r, c is the index of row and column
 
     # edge cases for where the vertices can move: 1. out of bounds
     # (<0 index or > last index), or visited a blocked vertice (1)
-    # or visit already visited path (visit is the hash set)
+    # or visit already visited the path (visit is the hash set)
     if ( min(r,c) < 0   
     or r == ROWS or c == COLS 
     or (r,c) in visit 
