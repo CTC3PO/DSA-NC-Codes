@@ -14,7 +14,7 @@ class LinkedList:
         self.head.next = self.tail
         self.tail.next = self.head
 
-    # INSERT FRONT
+    # INSERT IN FRONT
     def insertFront(self,val):
         newNode = ListNode(val)
         newNode.prev = self.head
@@ -23,7 +23,7 @@ class LinkedList:
         self.head.next.prev = newNode
         self.head.next = newNode
 
-    # INSERT END
+    # INSERT AT END
     def insertEnd(self, val): 
         newNode = ListNode(val)
         newNode.next = self.tail
