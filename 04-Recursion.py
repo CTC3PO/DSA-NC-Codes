@@ -3,7 +3,7 @@
 # this is a 1-branch recursion
 
 def factorial(n):
-    # base case
+    # first, check for base case, where n is fewer than 1
     if n <= 1: 
         return 1
     #recursive case:
